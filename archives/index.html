@@ -5,9 +5,9 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-    <meta name="author" content="John Doe">
+    <meta name="author" content="Sparkle79">
     <meta name="renderer" content="webkit">
-    <meta name="copyright" content="John Doe">
+    <meta name="copyright" content="Sparkle79">
         <meta name="keywords" content="hexo,hexo-theme,hexo-blog">
     <meta name="description" content="">
     <meta property="og:type" content="website">
@@ -15,7 +15,7 @@
 <meta property="og:url" content="https://slspk.ltd/archives/index.html">
 <meta property="og:site_name" content="Hexo">
 <meta property="og:locale" content="en_US">
-<meta property="article:author" content="John Doe">
+<meta property="article:author" content="Sparkle79">
 <meta name="twitter:card" content="summary">
     <meta http-equiv="Cache-control" content="no-cache">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -399,17 +399,28 @@
                 <main class="main index-page">
             
         <article class="index-post">
-            <a class="abstract-title" href="/2025/03/18/plugin/">
-                <span class="abstract-title-text">plugin</span>
+            <a class="abstract-title" href="/2025/03/18/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E8%AE%B0%E5%BD%95/">
+                <span class="abstract-title-text">博客搭建过程记录</span>
             </a>
             <div class="abstract-content">
-                test for the hexo vscode plugin
+                博客搭建流程
 
+博客框架: Hexo
+数据存储: Github Page
+CDN: Cloudflare
+域名: 腾讯云
+
+
+Hexo：博客内容的生成及渲染框架GithubPage：存储博客内容，包括文章，图片等CDN：国内访问 Github 由于众所周知的原因受限，可以通过CDN技术解决， 且 Cloudflare 免费提供服务域名：配合 CDN ，通过域名直接访问博客站点
+1、本地安装Hexo框架确保本地有npm包
+1npm install -g hexo-cli
+2、初始化本地文件为博客 or 网站起一个工程名，以”my-blog”为例
+123hexo init my-blogcd...
             </div>
             <!-- read more -->
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date" title="Last updated: 2025/03/18">
+                <div class="abstract-date" title="Last updated: 2025/03/19">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2025/03/18</span>
                 </div>
                 <!-- tags -->
@@ -466,7 +477,7 @@
             <ul class="year-list">
         <li class="archive-post-item">
             <span class="archive-post-date">03/18</span>
-            <a class="archive-post-title" href="/2025/03/18/plugin/">plugin</a>
+            <a class="archive-post-title" href="/2025/03/18/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E8%AE%B0%E5%BD%95/">博客搭建过程记录</a>
         </li>
             </ul>
     </div>
@@ -484,6 +495,10 @@
 
         <div class="sidebar-panel-categories">
     <div class="sidebar-categories-name">
+        <span class="sidebar-category-name" data-categories="技术">
+            <span class="iconfont-archer">&#xe60a;</span>
+            技术
+        </span>
     </div>
     <div class="iconfont-archer sidebar-categories-empty">&#xe678;</div>
     <div class="sidebar-categories-list"></div>
@@ -501,7 +516,7 @@
     var siteMeta = {
         url: "https://slspk.ltd",
         root: siteMetaRoot,
-        author: "John Doe"
+        author: "Sparkle79"
     }
 </script>
 
