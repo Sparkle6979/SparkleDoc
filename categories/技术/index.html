@@ -405,12 +405,13 @@
             <div class="abstract-content">
                 LLM MCP技术探究何为MCPMCP : Model Context Protocol（模型上下文协议）, 标准化了应用程序如何为大模型提供上下文。
 MCP能做什么通过MCP的服务调用，为 LLM 拓宽了能力，让其不止受限于作为一个语言模型，而使其形态更接近为Agent，例如帮助用户操作本地文件，为用户根据最近天气制定出行计划等
-MCP是如何做到的
+MCP的底层原理实际上，MCP Server里各工具的传参格式，传参方法，都被写入到了系统提示词 &#x2F; function call 字段中（具体的方式视不同的MCP Client而定）MCP Client根据LLM返回的结果调用对应的指令
+OpenRo...
             </div>
             <!-- read more -->
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date" title="Last updated: 2025/03/30">
+                <div class="abstract-date" title="Last updated: 2025/03/31">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2025/03/30</span>
                 </div>
                 <!-- tags -->
