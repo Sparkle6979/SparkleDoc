@@ -10,17 +10,24 @@
     <meta name="copyright" content="Sparkle79">
         <meta name="keywords" content="hexo,hexo-theme,hexo-blog">
     <meta name="description" content="">
-    <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="https://slspk.ltd/archives/2025/index.html">
+    <meta name="description" content="DDD领域驱动设计初探 回顾经典MVC从上到下：api层biz层(业务层)service层(服务层)dao层 系统架构的腐化 业务层处理逻辑而导致服务层变薄 业务层到DAO层的跨层调用&#x2F;层级之间的互相调用(跨层调用可以接受) 业务层的事情由服务层做，导致业务上浮(与1相反)  领域模型DDD从上到下 api层  定义API 入参透传  biz层  业务服务编排  domain层  领域调">
+<meta property="og:type" content="article">
+<meta property="og:title" content="DDD领域驱动设计初探">
+<meta property="og:url" content="https://slspk.ltd/2025/04/06/DDD%E9%A2%86%E5%9F%9F%E9%A9%B1%E5%8A%A8%E8%AE%BE%E8%AE%A1%E5%88%9D%E6%8E%A2/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="DDD领域驱动设计初探 回顾经典MVC从上到下：api层biz层(业务层)service层(服务层)dao层 系统架构的腐化 业务层处理逻辑而导致服务层变薄 业务层到DAO层的跨层调用&#x2F;层级之间的互相调用(跨层调用可以接受) 业务层的事情由服务层做，导致业务上浮(与1相反)  领域模型DDD从上到下 api层  定义API 入参透传  biz层  业务服务编排  domain层  领域调">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://slspk.ltd/images/p6/i1.png">
+<meta property="og:image" content="https://slspk.ltd/images/p6/i0.png">
+<meta property="article:published_time" content="2025-04-06T07:19:54.000Z">
+<meta property="article:modified_time" content="2025-04-07T10:29:28.237Z">
 <meta property="article:author" content="Sparkle79">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://slspk.ltd/images/p6/i1.png">
     <meta http-equiv="Cache-control" content="no-cache">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <link rel="icon" href="/assets/xrp.ico">
-    <title>Sparkle79&#39;s Field</title>
+    <title>DDD领域驱动设计初探 · Sparkle79&#39;s Field</title>
     <!-- /*! loadCSS. [c]2017 Filament Group, Inc. MIT License */
 /* This file is meant as a standalone workflow for
 - testing support for link[rel=preload]
@@ -208,6 +215,7 @@
             document.write('<script src="/lib/jquery.min.js" />')
         }
     </script>
+        <body class="post-body">
         <!-- header -->
         <header class="header header-mobile">
     <!-- top read progress line -->
@@ -237,7 +245,7 @@
             <a href="/">Sparkle79&#39;s Field</a>
         </div>
         <div class="post-title header-element">
-            <a href="#" class="post-name"></a>
+            <a href="#" class="post-name">DDD领域驱动设计初探</a>
         </div>
     </div>
 </header>
@@ -254,20 +262,56 @@
 
         <!-- wrapper -->
         <div class="wrapper">
-            <div class="site-intro" style="">
+            <div class="site-intro" style="    height:50vh;
+">
     <!-- 主页  -->
+    <!-- 404页  -->
     <div class="site-intro-placeholder"></div>
-    <div class="site-intro-img" style="background-image: url(/)"></div>
+    <div class="site-intro-img" style="background-image: url(/intro/post-bg.jpg)"></div>
     <div class="site-intro-meta">
         <!-- 标题  -->
         <h1 class="intro-title">
             <!-- 主页  -->
+                DDD领域驱动设计初探
+            <!-- 404 -->
         </h1>
         <!-- 副标题 -->
         <p class="intro-subtitle">
             <!-- 主页副标题  -->
+            <!-- 404 -->
         </p>
         <!-- 文章页 meta -->
+            <div class="post-intros">
+                <!-- 文章页标签  -->
+                    <div class="post-intro-tags" >
+</div>
+
+                <!-- 文章字数统计 -->
+                <div class="post-intro-meta">
+                    <!-- 撰写日期 -->
+                    <span class="iconfont-archer post-intro-calander">&#xe676;</span>
+                    <span class="post-intro-time">2025/04/06</span>
+                    <!-- busuanzi -->
+                        <span id="busuanzi_container_page_pv" class="busuanzi-pv">
+                            <span class="iconfont-archer post-intro-busuanzi">&#xe602;</span>
+                            <span id="busuanzi_value_page_pv"></span>
+                        </span>
+                    <!-- 文章分享 -->
+                    <span class="share-wrapper">
+                        <span class="iconfont-archer share-icon">&#xe71d;</span>
+                        <span class="share-text">Share</span>
+                        <ul class="share-list">
+                            <li class="iconfont-archer share-qr" data-type="qr">&#xe75b;
+                                <div class="share-qrcode"></div>
+                            </li>
+                            <li class="iconfont-archer" data-type="weibo">&#xe619;</li>
+                            <li class="iconfont-archer" data-type="qzone">&#xe62e;</li>
+                            <li class="iconfont-archer" data-type="twitter">&#xe634;</li>
+                            <li class="iconfont-archer" data-type="facebook">&#xe67a;</li>
+                        </ul>
+                    </span>
+                </div>
+            </div>
     </div>
 </div>
 
@@ -396,196 +440,85 @@
 
             <img class="loading" src="/assets/loading.svg" style="display: block; margin: 6rem auto 0 auto; width: 6rem; height: 6rem;" alt="loading">
             <div class="container container-unloaded">
-                <main class="main index-page">
+                <main class="main post-page">
+    <article class="article-entry">
+        <h1 id="DDD领域驱动设计初探"><a href="#DDD领域驱动设计初探" class="headerlink" title="DDD领域驱动设计初探"></a>DDD领域驱动设计初探</h1><p><img src="/../images/p6/i1.png" alt="alt text"></p>
+<h3 id="回顾经典MVC"><a href="#回顾经典MVC" class="headerlink" title="回顾经典MVC"></a>回顾经典MVC</h3><p>从上到下：<br><strong>api层</strong><br><strong>biz层(业务层)</strong><br><strong>service层(服务层)</strong><br><strong>dao层</strong></p>
+<h3 id="系统架构的腐化"><a href="#系统架构的腐化" class="headerlink" title="系统架构的腐化"></a>系统架构的腐化</h3><ol>
+<li>业务层处理逻辑而导致服务层变薄</li>
+<li>业务层到DAO层的跨层调用&#x2F;层级之间的互相调用(跨层调用可以接受)</li>
+<li>业务层的事情由服务层做，导致业务上浮(与1相反)</li>
+</ol>
+<h3 id="领域模型DDD"><a href="#领域模型DDD" class="headerlink" title="领域模型DDD"></a>领域模型DDD</h3><p>从上到下</p>
+<p><strong>api层</strong></p>
+<ul>
+<li>定义API</li>
+<li>入参透传</li>
+</ul>
+<p><strong>biz层</strong></p>
+<ul>
+<li>业务服务编排</li>
+</ul>
+<p><strong>domain层</strong></p>
+<ul>
+<li>领域调用</li>
+</ul>
+<p><strong>dao层</strong></p>
+<ul>
+<li>数据源操作</li>
+<li>application&#x2F;db&#x2F;cache</li>
+</ul>
+<h4 id="DDD特点"><a href="#DDD特点" class="headerlink" title="DDD特点"></a>DDD特点</h4><ul>
+<li>允许跨层调用，不允许同级调用</li>
+<li>业务细节放在领域层</li>
+<li><strong>事务管理</strong><ul>
+<li>业务层：大事务</li>
+<li>领域层：数据管理</li>
+</ul>
+</li>
+</ul>
+<h3 id="领域如何划分"><a href="#领域如何划分" class="headerlink" title="领域如何划分"></a>领域如何划分</h3><p>领域具体实现方式：<strong>倒置依赖</strong></p>
+<h3 id="倒置依赖"><a href="#倒置依赖" class="headerlink" title="倒置依赖"></a>倒置依赖</h3><p><img src="/../images/p6/i0.png" alt="alt text"></p>
+
+    </article>
+    <!-- license -->
+        <div class="license-wrapper">
+            <p>Author：<a href="https://slspk.ltd">Sparkle79</a>
+            <p>Link：<a href="https://slspk.ltd/2025/04/06/DDD%E9%A2%86%E5%9F%9F%E9%A9%B1%E5%8A%A8%E8%AE%BE%E8%AE%A1%E5%88%9D%E6%8E%A2/">https://slspk.ltd/2025/04/06/DDD%E9%A2%86%E5%9F%9F%E9%A9%B1%E5%8A%A8%E8%AE%BE%E8%AE%A1%E5%88%9D%E6%8E%A2/</a>
+            <p>Publish date：<a href="https://slspk.ltd/2025/04/06/DDD%E9%A2%86%E5%9F%9F%E9%A9%B1%E5%8A%A8%E8%AE%BE%E8%AE%A1%E5%88%9D%E6%8E%A2/">April 6th 2025, 3:19:54 pm</a>
+            <p>Update date：<a href="https://slspk.ltd/2025/04/06/DDD%E9%A2%86%E5%9F%9F%E9%A9%B1%E5%8A%A8%E8%AE%BE%E8%AE%A1%E5%88%9D%E6%8E%A2/">April 7th 2025, 6:29:28 pm</a>
+            <p>License：本文采用<a rel="license noopener" target="_blank" href="http://creativecommons.org/licenses/by-nc/4.0/">知识共享署名-非商业性使用 4.0 国际许可协议</a>进行许可</p>
+        </div>
+    <!-- paginator -->
+    <ul class="post-paginator">
+        <li class="next">
+        </li>
+        <li class="previous">
+                <div class="prevSlogan">Previous Post</div>
+                <a href="/2025/03/30/%E6%AF%95%E4%B8%9A%E9%9A%8F%E6%83%B3/" title="毕业随想">
+                    <div class="prevTitle">毕业随想</div>
+                </a>
+        </li>
+    </ul>
+    <!-- comment -->
+        <div class="post-comment">
+            <!-- 来必力 City 版安装代码 -->
+
             
-        <article class="index-post">
-            <a class="abstract-title" href="/2025/04/06/DDD%E9%A2%86%E5%9F%9F%E9%A9%B1%E5%8A%A8%E8%AE%BE%E8%AE%A1%E5%88%9D%E6%8E%A2/">
-                <span class="abstract-title-text">DDD领域驱动设计初探</span>
-            </a>
-            <div class="abstract-content">
-                DDD领域驱动设计初探
-回顾经典MVC从上到下：api层biz层(业务层)service层(服务层)dao层
-系统架构的腐化
-业务层处理逻辑而导致服务层变薄
-业务层到DAO层的跨层调用&#x2F;层级之间的互相调用(跨层调用可以接受)
-业务层的事情由服务层做，导致业务上浮(与1相反)
-
-领域模型DDD从上到下
-api层
-
-定义API
-入参透传
-
-biz层
-
-业务服务编排
-
-domain层
-
-领域调用
-
-dao层
-
-数据源操作
-application&#x2F;db&#x2F;cache
-
-DDD特点
-允许跨层调用，不允许同级调用
-业务细节放在领域层
-事务管理
-业务层：大事务
-领域层：数据...
-            </div>
-            <!-- read more -->
-            <div class="abstract-post-meta">
-                <!-- date -->
-                <div class="abstract-date" title="Last updated: 2025/04/07">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2025/04/06</span>
-                </div>
-                <!-- tags -->
-            </div>
-        </article>
-        <div class="index-post-divider"></div>
             
-        <article class="index-post">
-            <a class="abstract-title" href="/2025/03/30/%E6%AF%95%E4%B8%9A%E9%9A%8F%E6%83%B3/">
-                <span class="abstract-title-text">毕业随想</span>
-            </a>
-            <div class="abstract-content">
-                毕业随想现在是 2025年3月30日晚23点19分，明天就是我的硕士研究生毕业典礼，我带着父母从家乡来到这里一同参与，可是说实话，我却没有什么实感，这里的实感并不是说从一种襁褓中的婴儿突然面对社会的心境，而更像是一种虽身处局内，但却更像一个旁观者，好似这番热闹的情景与我并无关系；为什么会这样呢？我心知肚明，研究生这接近三年的时间里，对这所学校，我的内心并无归宿感，原因有很多，或许是因为自己是异地校区，又或许是因为这接近三年的时间里，只有大概一年的时间在执行着所谓”学生”的生活，其他的时间都在四处奔波，这些与我高中，大学时的感受与体验相去甚远；是的，我的根并不生长在这里，想到此，我有些哀伤...
-            </div>
-            <!-- read more -->
-            <div class="abstract-post-meta">
-                <!-- date -->
-                <div class="abstract-date" title="Last updated: 2025/03/30">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2025/03/30</span>
-                </div>
-                <!-- tags -->
-            </div>
-        </article>
-        <div class="index-post-divider"></div>
             
-        <article class="index-post">
-            <a class="abstract-title" href="/2025/03/30/LLM%20MCP%E6%8A%80%E6%9C%AF%E6%8E%A2%E7%A9%B6/">
-                <span class="abstract-title-text">LLM MCP技术探究</span>
-            </a>
-            <div class="abstract-content">
-                LLM MCP技术探究何为MCPMCP : Model Context Protocol（模型上下文协议）, 标准化了应用程序如何为大模型提供上下文。
-MCP能做什么通过MCP的服务调用，为 LLM 拓宽了能力，让其不止受限于作为一个语言模型，而使其形态更接近为Agent，例如帮助用户操作本地文件，为用户根据最近天气制定出行计划等
-MCP的底层原理实际上，MCP Server里各工具的传参格式，传参方法，都被写入到了系统提示词 &#x2F; function call 字段中（具体的方式视不同的MCP Client而定）MCP Client根据LLM返回的结果调用对应的指令
-OpenRo...
-            </div>
-            <!-- read more -->
-            <div class="abstract-post-meta">
-                <!-- date -->
-                <div class="abstract-date" title="Last updated: 2025/04/03">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2025/03/30</span>
-                </div>
-                <!-- tags -->
-            </div>
-        </article>
-        <div class="index-post-divider"></div>
-            
-        <article class="index-post">
-            <a class="abstract-title" href="/2025/03/25/LLM%20RAG%E6%8A%80%E6%9C%AF%E6%8E%A2%E7%A9%B6/">
-                <span class="abstract-title-text">LLM RAG技术探究</span>
-            </a>
-            <div class="abstract-content">
-                LLM RAG技术探究RAG定义：Retrieval-Augmented Generation: 增强检索生成
-RAG存在的目的：利用外部知识文档或向量数据库增强生成内容的可靠性
-RAG的两个阶段：检索在数据存储集群中根据关键词得到相关信息
-生成将相关信息作为上下文输入到大模型，生成答案
-RAG实践框架开源RAG引擎框架:Ragflow
-MAC部署指南资料：DeepSeek + RAGFlow 构建个人知识库记录 Mac M4 安装 RAGFlow 的一次排坑过程mac本地部署DeepSeek+RAGFlow教程踩坑指南
-小插曲自己在部署中遇到的一些问题:
-12342025-03-26T...
-            </div>
-            <!-- read more -->
-            <div class="abstract-post-meta">
-                <!-- date -->
-                <div class="abstract-date" title="Last updated: 2025/03/27">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2025/03/25</span>
-                </div>
-                <!-- tags -->
-            </div>
-        </article>
-        <div class="index-post-divider"></div>
-            
-        <article class="index-post">
-            <a class="abstract-title" href="/2025/03/20/%E5%8C%97%E4%BA%AC%E4%B9%8B%E6%97%85/">
-                <span class="abstract-title-text">北京之旅</span>
-            </a>
-            <div class="abstract-content">
-                北京之旅景点北海
-天坛
-紫竹院公园
-奥林匹克森林公园
-美食炙子烤肉
+            <!-- utteranc评论 -->
 
-            </div>
-            <!-- read more -->
-            <div class="abstract-post-meta">
-                <!-- date -->
-                <div class="abstract-date" title="Last updated: 2025/03/25">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2025/03/20</span>
-                </div>
-                <!-- tags -->
-            </div>
-        </article>
-        <div class="index-post-divider"></div>
+            <!-- partial('_partial/comment/changyan') -->
+            <!--PC版-->
+
             
-        <article class="index-post">
-            <a class="abstract-title" href="/2025/03/19/%E5%A6%82%E4%BD%95%E5%BC%80%E5%A7%8B%E8%87%AA%E5%B7%B1%E7%9A%84%E5%BC%80%E6%BA%90%E4%B9%8B%E8%B7%AF/">
-                <span class="abstract-title-text">如何开始自己的开源之路</span>
-            </a>
-            <div class="abstract-content">
-                第一次开源项目经历一次机缘巧合的状况下，接触到了太乙平台平台上会有一些开源竞赛
-点击开源竞赛或推荐项目，可以了解一些自己感兴趣或擅长的比赛
-如何去了解一个开源项目对于开源项目来说，最权威的文档即官方文档，一般来说在项目的Github链接中都会有体现，特别是 readme.md 上的说明，以Spring AI Alibaba为例Spring AI Alibaba readme在官方文档中，我们至少可以了解一个项目解决的问题，一些比较大的项目还会包括项目的底层架构实现，以及一些使用样例等
-Tips: 在进行项目贡献之前，至少要运行一下提供的样例，熟悉使用方式
-如何去做出自己的贡献使用期间发现...
-            </div>
-            <!-- read more -->
-            <div class="abstract-post-meta">
-                <!-- date -->
-                <div class="abstract-date" title="Last updated: 2025/03/25">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2025/03/19</span>
-                </div>
-                <!-- tags -->
-            </div>
-        </article>
-        <div class="index-post-divider"></div>
             
-        <article class="index-post">
-            <a class="abstract-title" href="/2025/03/18/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E8%AE%B0%E5%BD%95/">
-                <span class="abstract-title-text">博客搭建过程记录</span>
-            </a>
-            <div class="abstract-content">
-                博客搭建流程
-
-博客框架: Hexo
-数据存储: Github Page
-CDN: Cloudflare
-域名: 腾讯云
-
-
-Hexo：博客内容的生成及渲染框架GithubPage：存储博客内容，包括文章，图片等CDN：国内访问 Github 由于众所周知的原因受限，可以通过CDN技术解决， 且 Cloudflare 免费提供服务域名：配合 CDN ，通过域名直接访问博客站点
-1、本地安装Hexo框架确保本地有npm包
-1npm install -g hexo-cli
-2、初始化本地文件为博客 or 网站起一个工程名，以”my-blog”为例
-123hexo init my-blogcd...
-            </div>
-            <!-- read more -->
-            <div class="abstract-post-meta">
-                <!-- date -->
-                <div class="abstract-date" title="Last updated: 2025/03/25">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2025/03/18</span>
-                </div>
-                <!-- tags -->
-            </div>
-        </article>
-        <div class="index-post-divider"></div>
-    <!-- paginator  -->
+            
+        </div>
+    <!-- timeliness note -->
+    <!-- idea from: https://hexo.fluid-dev.com/posts/hexo-injector/#%E6%96%87%E7%AB%A0%E6%97%B6%E6%95%88%E6%80%A7%E6%8F%90%E7%A4%BA -->
+    <!-- Mathjax -->
 </main>
 
                 <!-- profile -->
@@ -613,6 +546,13 @@ Hexo：博客内容的生成及渲染框架GithubPage：存储博客内容，包
 
         </div>
         <!-- toc -->
+            <div class="toc-wrapper toc-wrapper-loding" style=    top:50vh;
+>
+                <div class="toc-catalog">
+                    <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
+                </div>
+                <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#DDD%E9%A2%86%E5%9F%9F%E9%A9%B1%E5%8A%A8%E8%AE%BE%E8%AE%A1%E5%88%9D%E6%8E%A2"><span class="toc-number">1.</span> <span class="toc-text">DDD领域驱动设计初探</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9B%9E%E9%A1%BE%E7%BB%8F%E5%85%B8MVC"><span class="toc-number">1.0.1.</span> <span class="toc-text">回顾经典MVC</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%B3%BB%E7%BB%9F%E6%9E%B6%E6%9E%84%E7%9A%84%E8%85%90%E5%8C%96"><span class="toc-number">1.0.2.</span> <span class="toc-text">系统架构的腐化</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%A2%86%E5%9F%9F%E6%A8%A1%E5%9E%8BDDD"><span class="toc-number">1.0.3.</span> <span class="toc-text">领域模型DDD</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#DDD%E7%89%B9%E7%82%B9"><span class="toc-number">1.0.3.1.</span> <span class="toc-text">DDD特点</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%A2%86%E5%9F%9F%E5%A6%82%E4%BD%95%E5%88%92%E5%88%86"><span class="toc-number">1.0.4.</span> <span class="toc-text">领域如何划分</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%80%92%E7%BD%AE%E4%BE%9D%E8%B5%96"><span class="toc-number">1.0.5.</span> <span class="toc-text">倒置依赖</span></a></li></ol></li></ol></li></ol>
+            </div>
         <!-- sidebar -->
         <div class="sidebar sidebar-hide">
     <ul class="sidebar-tabs sidebar-tabs-active-0">
@@ -727,6 +667,7 @@ Hexo：博客内容的生成及渲染框架GithubPage：存储博客内容，包
         <!-- busuanzi -->
             <script src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" async></script>
         <!-- async load share.js -->
+            <script src="/scripts/share.js" async></script>
         <!-- mermaid -->
     </body>
 </html>
