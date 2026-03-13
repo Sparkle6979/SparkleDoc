@@ -12,7 +12,7 @@
     This is a placeholder for base href that will be replaced by the value of
     the `--base-href` argument provided to `flutter build`.
   -->
-  <base href="/app/">
+  <base href="$FLUTTER_BASE_HREF">
 
   <meta charset="UTF-8">
   <meta content="IE=Edge" http-equiv="X-UA-Compatible">
@@ -102,8 +102,29 @@
   </script>
   <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
 </head>
-<body>
   <script src="flutter_bootstrap.js" async=""></script>
-
-
+  
+  <!-- Minimalist Loading Screen for Philosophy Sayings -->
+  <div id="loading-container" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; background-color: #0A0A0A; z-index: 9999;">
+    <div style="width: 10px; height: 10px; background-color: #FFFFFF; border-radius: 50%; animation: pulse 1.5s infinite ease-in-out;"></div>
+    <div style="margin-top: 20px; color: #555555; font-family: monospace; font-size: 12px; letter-spacing: 0.2em; text-transform: uppercase;">Waking up the philosophers...</div>
+    <style>
+      @keyframes pulse {
+        0% { transform: scale(0.8); opacity: 0.2; }
+        50% { transform: scale(1.2); opacity: 0.8; }
+        100% { transform: scale(0.8); opacity: 0.2; }
+      }
+    </style>
+  </div>
+  
+  <script>
+    window.addEventListener('flutter-first-frame', function() {
+      var loader = document.getElementById('loading-container');
+      if (loader) {
+        loader.style.transition = 'opacity 0.6s ease';
+        loader.style.opacity = '0';
+        setTimeout(() => loader.remove(), 600);
+      }
+    });
+  </script>
 </body></html>
