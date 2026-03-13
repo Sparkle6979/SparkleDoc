@@ -98488,13 +98488,8 @@ case 2:return A.G(o.at(-1),r)}})
 return A.I($async$$0,r)},
 $S:637}
 A.axc.prototype={
-$2(a,b){var s,r,q,p=null,o=b.a===B.oW||this.a.f
-if(o)s=p
-else{s=t.p
-r=A.df(A.b([B.WN,A.aH("Philosophy Sayings",p,p,p,p,A.aRE().$3$fontSize$fontWeight$letterSpacing(16,B.a7,2.5),p,p),B.WM,A.aH("\u2014\u2014 \u6c89 \u601d \u5ba4 \u2014\u2014",p,p,p,p,A.jD().$3$color$fontSize$letterSpacing(B.K,9,6),p,p)],s),B.L,B.R,B.b5)
-q=this.a
-r=A.Ah(A.b([A.w8(p,p,B.Ld,p,p,q.gamW(),p,p,"\u5206\u4eab\u54f2\u601d"),B.h0,A.w8(p,p,B.Lj,p,p,new A.ax9(a),p,p,"\u54f2\u601d\u6536\u85cf"),B.h0,A.w8(p,p,B.Lp,p,p,new A.axa(q,a),p,p,"\u8bbe\u7f6e"),B.h0],s),B.C,p,!0,0,B.k,p,r,40)
-s=r}return A.xd(s,B.k8,new A.axb(this.a,o,b).$0(),p,p)},
+$2(a,b){var s=null,r=b.a===B.oW||this.a.f,q=t.p,p=A.df(A.b([B.WN,A.aH("Philosophy Sayings",s,s,s,s,A.aRE().$3$fontSize$fontWeight$letterSpacing(16,B.a7,2.5),s,s),B.WM,A.aH("\u2014\u2014 \u6c89 \u601d \u5ba4 \u2014\u2014",s,s,s,s,A.jD().$3$color$fontSize$letterSpacing(B.K,9,6),s,s)],q),B.L,B.R,B.b5),o=this.a
+return A.xd(A.Ah(A.b([A.w8(s,s,B.Ld,s,s,o.gamW(),s,s,"\u5206\u4eab\u54f2\u601d"),B.h0,A.w8(s,s,B.Lj,s,s,new A.ax9(a),s,s,"\u54f2\u601d\u6536\u85cf"),B.h0,A.w8(s,s,B.Lp,s,s,new A.axa(o,a),s,s,"\u8bbe\u7f6e"),B.h0],q),B.C,s,!0,0,B.k,s,p,40),B.k8,new A.axb(o,r,b).$0(),s,s)},
 $S:638}
 A.ax9.prototype={
 $0(){var s=A.mY(new A.ax8(),null,t.z)
