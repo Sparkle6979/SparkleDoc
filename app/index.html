@@ -106,34 +106,26 @@
   
   <!-- Minimalist Loading Screen for Philosophy Sayings -->
   <div id="loading-container" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; background-color: #FAFAFA; z-index: 9999;">
-    <!-- 水波纹加载仪 (Zen Ripples) -->
+    <!-- 星芒加载仪 (Celestial Star) -->
     <div style="position: relative; width: 48px; height: 48px; display: flex; align-items: center; justify-content: center;">
-      <svg width="48" height="48" viewBox="0 0 48 48">
-        <circle cx="24" cy="24" r="2" fill="#111" />
-        <circle cx="24" cy="24" r="2" class="zen-ripple" style="animation-delay: 0s;" />
-        <circle cx="24" cy="24" r="2" class="zen-ripple" style="animation-delay: 0.8s;" />
-        <circle cx="24" cy="24" r="2" class="zen-ripple" style="animation-delay: 1.6s;" />
+      <svg width="28" height="28" viewBox="0 0 48 48" class="celestial-star">
+        <path d="M24 0 Q24 24 48 24 Q24 24 24 48 Q24 24 0 24 Q24 24 24 0 Z" fill="#111" />
       </svg>
     </div>
     
-    <div style="margin-top: 32px; color: #333333; font-family: -apple-system, BlinkMacSystemFont, 'Times New Roman', serif; font-size: 11px; letter-spacing: 0.25em; text-transform: uppercase; animation: text-breathe 2.4s infinite ease-in-out;">Waking up the philosophers</div>
-    <div style="margin-top: 10px; color: #999999; font-family: 'PingFang SC', 'Noto Sans SC', serif; font-size: 11px; letter-spacing: 0.3em; margin-right: -0.3em; animation: text-breathe 2.4s infinite ease-in-out;">正在造访全知之海...</div>
+    <div style="margin-top: 32px; color: #333333; font-family: -apple-system, BlinkMacSystemFont, 'Times New Roman', serif; font-size: 11px; letter-spacing: 0.25em; text-transform: uppercase; animation: text-breathe 3s infinite ease-in-out;">Waking up the philosophers</div>
+    <div style="margin-top: 10px; color: #999999; font-family: 'PingFang SC', 'Noto Sans SC', serif; font-size: 11px; letter-spacing: 0.3em; margin-right: -0.3em; animation: text-breathe 3s infinite ease-in-out;">正在造访全知之海...</div>
     
     <style>
-      .zen-ripple {
-        fill: none;
-        stroke: #111;
-        stroke-width: 1;
-        opacity: 0;
-        transform-origin: 24px 24px;
-        animation: sea-ripple 2.4s cubic-bezier(0.21, 0.53, 0.56, 0.8) infinite;
+      .celestial-star {
+        animation: star-breathe 3s infinite ease-in-out;
       }
-      @keyframes sea-ripple {
-        0% { r: 2px; opacity: 0.6; stroke-width: 1; }
-        100% { r: 22px; opacity: 0; stroke-width: 0.2; }
+      @keyframes star-breathe {
+        0%, 100% { transform: scale(0.8); opacity: 0.3; }
+        50% { transform: scale(1.15); opacity: 1; }
       }
       @keyframes text-breathe {
-        0%, 100% { opacity: 0.6; }
+        0%, 100% { opacity: 0.5; }
         50% { opacity: 1; }
       }
     </style>
