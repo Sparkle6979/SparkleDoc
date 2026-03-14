@@ -98992,7 +98992,7 @@ p=q?B.L5:B.KZ
 p=A.fy(p,q?B.ds:B.lJ,m,m)
 o=t.p
 p=A.fF(A.b([p,B.BZ,A.aH(q?"\u6d45\u5c1d\u8f84\u6b62 (Ephemeral)":"\u6df1\u5ea6\u5171\u9e23 (Resonance)",m,m,m,m,B.Cw,m,m)],o),B.L,B.R,B.V,0)
-q=n.e.a===B.c1?"\u60a8\u6b63\u4f7f\u7528\u516c\u5171\u901a\u9053\u4e0e\u5148\u8d24\u5fae\u5f31\u5171\u9e23\u3002\u6bcf\u65e5\u90fd\u5728\u6d88\u8017\u7740\u7f18\u5206\u3002":"\u60a8\u5df2\u5efa\u7acb\u79c1\u6709\u7684\u7075\u9b42\u94fe\u8def\u3002\u5728\u6b64\uff0c\u601d\u60f3\u7684\u6d41\u52a8\u4e0d\u518d\u53d7\u9650\u3002"
+q=n.e.a===B.c1?"\u60a8\u6b63\u901a\u8fc7\u516c\u5171\u601d\u7ef4\u4fe1\u6807\u4e0e\u5148\u8d24\u5fae\u5f31\u5171\u9e23\u3002\u5373\u523b\u5f00\u542f\u5bfb\u89c5\u3002":"\u60a8\u5df2\u5efa\u7acb\u79c1\u6709\u7684\u7075\u9b42\u94fe\u8def\u3002\u5728\u6b64\uff0c\u601d\u60f3\u7684\u6d41\u52a8\u4e0d\u518d\u53d7\u9650\u3002"
 r=A.b([A.aGT(new A.bx(B.fk,A.df(A.b([p,B.j3,A.aH(q,m,m,m,m,A.f9(m,m,B.by,m,m,m,m,m,m,m,m,m,m,m,m,m,1.4,!0,m,m,m,m,m,m,m,m),m,m),B.bG,new A.Uh(n.e.a===B.cm,new A.aBC(n),B.lJ,B.a1G,B.a1R,m)],o),B.bC,B.R,B.V),m),2,m,new A.cK(r,B.o))],o)
 q=n.e
 if(q.a===B.cm){p=A.ek(12)
