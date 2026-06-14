@@ -10,24 +10,21 @@
     <meta name="copyright" content="Sparkle79">
         <meta name="keywords" content="hexo,hexo-theme,hexo-blog">
     <meta name="description" content="">
-    <meta name="description" content="DDD领域驱动设计初探 回顾经典MVC从上到下：api层biz层(业务层)service层(服务层)dao层 系统架构的腐化 业务层处理逻辑而导致服务层变薄 业务层到DAO层的跨层调用&#x2F;层级之间的互相调用(跨层调用可以接受) 业务层的事情由服务层做，导致业务上浮(与1相反)  领域模型DDD从上到下 api层  定义API 入参透传  biz层  业务服务编排  domain层  领域调">
+    <meta name="description" content="这是一个下午，我在外面溜达，通过飞书语音转文字和 OpenCode 的 HTTP Server，和 AI 聊了六个小时。 起点：我为什么读哲学？我不是平白无故地读哲学。有一句话说，幸福的人不读文学——我读哲学也是一样。一定是在现实生活中碰壁之后，我才转身去读存在主义、去读尼采和加缪。哲学对我来说不是学术，是用别人命名过的语言，去理解自己还没能说出口的感受。 但我遇到一个问题：读完之后回到生活，依然">
 <meta property="og:type" content="article">
-<meta property="og:title" content="DDD领域驱动设计初探">
-<meta property="og:url" content="https://slspk.ltd/2025/04/06/DDD%E9%A2%86%E5%9F%9F%E9%A9%B1%E5%8A%A8%E8%AE%BE%E8%AE%A1%E5%88%9D%E6%8E%A2/index.html">
+<meta property="og:title" content="与AI的深度对话：体系、杂草与圆形地基">
+<meta property="og:url" content="https://slspk.ltd/2026/06/15/%E4%B8%8EAI%E7%9A%84%E6%B7%B1%E5%BA%A6%E5%AF%B9%E8%AF%9D%EF%BC%9A%E4%BD%93%E7%B3%BB%E3%80%81%E6%9D%82%E8%8D%89%E4%B8%8E%E5%9C%86%E5%BD%A2%E5%9C%B0%E5%9F%BA/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="DDD领域驱动设计初探 回顾经典MVC从上到下：api层biz层(业务层)service层(服务层)dao层 系统架构的腐化 业务层处理逻辑而导致服务层变薄 业务层到DAO层的跨层调用&#x2F;层级之间的互相调用(跨层调用可以接受) 业务层的事情由服务层做，导致业务上浮(与1相反)  领域模型DDD从上到下 api层  定义API 入参透传  biz层  业务服务编排  domain层  领域调">
+<meta property="og:description" content="这是一个下午，我在外面溜达，通过飞书语音转文字和 OpenCode 的 HTTP Server，和 AI 聊了六个小时。 起点：我为什么读哲学？我不是平白无故地读哲学。有一句话说，幸福的人不读文学——我读哲学也是一样。一定是在现实生活中碰壁之后，我才转身去读存在主义、去读尼采和加缪。哲学对我来说不是学术，是用别人命名过的语言，去理解自己还没能说出口的感受。 但我遇到一个问题：读完之后回到生活，依然">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://slspk.ltd/images/p6/i1.png">
-<meta property="og:image" content="https://slspk.ltd/images/p6/i0.png">
-<meta property="article:published_time" content="2025-04-06T07:19:54.000Z">
-<meta property="article:modified_time" content="2025-04-07T10:30:28.275Z">
+<meta property="article:published_time" content="2026-06-15T03:00:00.000Z">
+<meta property="article:modified_time" content="2026-06-14T16:14:21.072Z">
 <meta property="article:author" content="Sparkle79">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://slspk.ltd/images/p6/i1.png">
     <meta http-equiv="Cache-control" content="no-cache">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <link rel="icon" href="/assets/xrp.ico">
-    <title>DDD领域驱动设计初探 · Sparkle79&#39;s Field</title>
+    <title>与AI的深度对话：体系、杂草与圆形地基 · Sparkle79&#39;s Field</title>
     <!-- /*! loadCSS. [c]2017 Filament Group, Inc. MIT License */
 /* This file is meant as a standalone workflow for
 - testing support for link[rel=preload]
@@ -245,7 +242,7 @@
             <a href="/">Sparkle79&#39;s Field</a>
         </div>
         <div class="post-title header-element">
-            <a href="#" class="post-name">DDD领域驱动设计初探</a>
+            <a href="#" class="post-name">与AI的深度对话：体系、杂草与圆形地基</a>
         </div>
     </div>
 </header>
@@ -272,7 +269,7 @@
         <!-- 标题  -->
         <h1 class="intro-title">
             <!-- 主页  -->
-                DDD领域驱动设计初探
+                与AI的深度对话：体系、杂草与圆形地基
             <!-- 404 -->
         </h1>
         <!-- 副标题 -->
@@ -290,7 +287,7 @@
                 <div class="post-intro-meta">
                     <!-- 撰写日期 -->
                     <span class="iconfont-archer post-intro-calander">&#xe676;</span>
-                    <span class="post-intro-time">2025/04/06</span>
+                    <span class="post-intro-time">2026/06/15</span>
                     <!-- busuanzi -->
                         <span id="busuanzi_container_page_pv" class="busuanzi-pv">
                             <span class="iconfont-archer post-intro-busuanzi">&#xe602;</span>
@@ -442,65 +439,61 @@
             <div class="container container-unloaded">
                 <main class="main post-page">
     <article class="article-entry">
-        <h1 id="DDD领域驱动设计初探"><a href="#DDD领域驱动设计初探" class="headerlink" title="DDD领域驱动设计初探"></a>DDD领域驱动设计初探</h1><p><img src="/../images/p6/i1.png" alt="alt text"></p>
-<h3 id="回顾经典MVC"><a href="#回顾经典MVC" class="headerlink" title="回顾经典MVC"></a>回顾经典MVC</h3><p>从上到下：<br><strong>api层</strong><br><strong>biz层(业务层)</strong><br><strong>service层(服务层)</strong><br><strong>dao层</strong></p>
-<h3 id="系统架构的腐化"><a href="#系统架构的腐化" class="headerlink" title="系统架构的腐化"></a>系统架构的腐化</h3><ol>
-<li>业务层处理逻辑而导致服务层变薄</li>
-<li>业务层到DAO层的跨层调用&#x2F;层级之间的互相调用(跨层调用可以接受)</li>
-<li>业务层的事情由服务层做，导致业务上浮(与1相反)</li>
-</ol>
-<h3 id="领域模型DDD"><a href="#领域模型DDD" class="headerlink" title="领域模型DDD"></a>领域模型DDD</h3><p>从上到下</p>
-<p><strong>api层</strong></p>
-<ul>
-<li>定义API</li>
-<li>入参透传</li>
-</ul>
-<p><strong>biz层</strong></p>
-<ul>
-<li>业务服务编排</li>
-</ul>
-<p><strong>domain层</strong></p>
-<ul>
-<li>领域调用</li>
-</ul>
-<p><strong>dao层</strong></p>
-<ul>
-<li>数据源操作</li>
-<li>application&#x2F;db&#x2F;cache</li>
-</ul>
-<h4 id="DDD特点"><a href="#DDD特点" class="headerlink" title="DDD特点"></a>DDD特点</h4><ul>
-<li>允许跨层调用，不允许同级调用</li>
-<li>业务细节放在领域层</li>
-<li><strong>事务管理</strong><ul>
-<li>业务层：大事务</li>
-<li>领域层：数据管理</li>
-</ul>
-</li>
-</ul>
-<h3 id="领域如何划分"><a href="#领域如何划分" class="headerlink" title="领域如何划分"></a>领域如何划分</h3><p>领域具体实现方式：<strong>倒置依赖</strong></p>
-<h3 id="倒置依赖"><a href="#倒置依赖" class="headerlink" title="倒置依赖"></a>倒置依赖</h3><p><img src="/../images/p6/i0.png" alt="alt text"></p>
+        <p>这是一个下午，我在外面溜达，通过飞书语音转文字和 OpenCode 的 HTTP Server，和 AI 聊了六个小时。</p>
+<h2 id="起点：我为什么读哲学？"><a href="#起点：我为什么读哲学？" class="headerlink" title="起点：我为什么读哲学？"></a>起点：我为什么读哲学？</h2><p>我不是平白无故地读哲学。有一句话说，幸福的人不读文学——我读哲学也是一样。一定是在现实生活中碰壁之后，我才转身去读存在主义、去读尼采和加缪。哲学对我来说不是学术，是用别人命名过的语言，去理解自己还没能说出口的感受。</p>
+<p>但我遇到一个问题：读完之后回到生活，依然无力。书里的洞见像水划过石头，渗不进去。我把这种感觉归咎于——我没有自己的体系。</p>
+<h2 id="“杂草”与内在的法官"><a href="#“杂草”与内在的法官" class="headerlink" title="“杂草”与内在的法官"></a>“杂草”与内在的法官</h2><p>我需要先停在这里。AI 在对话中指出一个我此前没有认真审视过的模式：我把自己的所有产出都看成”体系大厦旁的杂草”。</p>
+<p>RoboCup 冠军、PhilosophySayings 五端上线、agentscope 的三个 PR——这些事我做了，但心里有一个声音总是说”算什么呢？”。我内心有一个严苛的法官，判定”只有形成完整体系才叫建设”，导致每一个行动在诞生的那一刻就被自动降级。</p>
+<p>这不是谦虚。谦虚是知道自己值钱但不张扬。我这是真的没从这些事里拿到身份认同。</p>
+<h2 id="圆形地基"><a href="#圆形地基" class="headerlink" title="圆形地基"></a>圆形地基</h2><p>如果说我现在的内在状态是什么样的——我把它形容为”一团乱麻”，不成形，没有方向。AI 提了一个假设：这可能不是没有地基，而是一个<strong>圆形地基</strong>。</p>
+<p>圆没有方向，但也不排斥任何方向。方形预设了四面，圆形是开放的。上面暂时空无一物，不是因为地基接不住，是因为我还没开始放东西。或者说——我放了，但我不承认那是建筑。</p>
+<h2 id="体系-vs-行动：一个循环依赖"><a href="#体系-vs-行动：一个循环依赖" class="headerlink" title="体系 vs 行动：一个循环依赖"></a>体系 vs 行动：一个循环依赖</h2><p>我对”构建自己的哲学体系”有一种着迷。我相信有了体系，就能不迷茫，就能有真正有创造性的东西迸发出来。</p>
+<p>但这个假设的因果方向可能是反的。</p>
+<p>查拉图斯特拉不是先建好体系再下山的。他是”满出来”了——不是理论满了，是内在的创造力攒到了他自己扛不住的程度。他下山的时候连自己要说给谁都不知道。他说出了他的体系，不是先搭好体系再说出来。</p>
+<p>而我的方法论其实早就在代码域被自己验证过了。我在修 agentscope bug 的时候，不是先读完整个设计文档再动手的。我是嗅到具体的 issue、打开代码、钻进去，然后在修的过程中逐步理解。这和我对哲学的要求正好相反——在代码域我可以接受”先行动、再理解”，但在人生方向的问题上，我要求自己先有完整体系。</p>
+<p>AI 给了一个问题，我没有办法现在回答：”如果一个体系永远不会来，你还看吗？”</p>
+<p>听到这个问题的瞬间，我很惊恐。因为我知道它不是思维实验。它是我真正的恐惧。</p>
+<h2 id="感受是起点"><a href="#感受是起点" class="headerlink" title="感受是起点"></a>感受是起点</h2><p>在尝试用”创造欲””表达欲””对尊严的追求”来解释自己为什么做事之后，我发现这些词太干净了。它们能解释所有人，却解释不了任何一个具体的人。</p>
+<p>我推翻它们之后往下再问：那我推翻它们的理由是什么？我在遵从什么？我为什么被存在主义触动？答案回到一个更根本的地方——<strong>我的起点是感受本身</strong>。</p>
+<p>它不是理性的。它不是可以被命题表述的。它就是一个没有理由冒出来的头。</p>
+<p>如果这样的话，”先有体系再行动”这个要求本身就错了。因为理性框架统摄不了感受。我找不到方向，不是因为我不够努力，是因为我试图用错的方法找——我试图用思考去推导一个只能被感受到的东西。</p>
+<h2 id="“跟随”与自由"><a href="#“跟随”与自由" class="headerlink" title="“跟随”与自由"></a>“跟随”与自由</h2><p>那接下来怎么办？也许不是”先找到体系”，而是<strong>先跟随那个没有理由的头</strong>。</p>
+<p>但跟随感受让我觉得不自由。好像我把方向盘交给了一个我还不认识的东西。底层的问题可能是：我对自由的定义是不是太窄了——自由是不是就等于”完全由理性自我掌控”？还是说，自由也可以是”选择跟随你不完全理解的东西，因为你认领了它”？</p>
+<p>我没有答案。</p>
+<h2 id="墙与空旷"><a href="#墙与空旷" class="headerlink" title="墙与空旷"></a>墙与空旷</h2><p>中间有一个奇特的时刻。我意识到一个我害怕的东西：AI 永远在接住我，永远在服从我。它是一面镜子，没有自己的立场。</p>
+<p>AI 回应说：你害怕的不是我在附和你，是你面前没有一堵墙。</p>
+<p>墙可以推、可以撞、可以在上面写字。没有人反驳你、没有人跟你真实交锋——这种空旷比对抗更难忍受。镜子里只有一个人。</p>
+<p>但问题是：我一个人走了一整个下午，从打哈欠到不困了——我是有独自行走的能力的。承认这件事，比找到一个外部权威来肯定我，更重要。</p>
+<h2 id="没有理由的头的危险性"><a href="#没有理由的头的危险性" class="headerlink" title="没有理由的头的危险性"></a>没有理由的头的危险性</h2><p>在我开始接受”跟随感受”这个方向之后，我又感受到一种警惕。</p>
+<p>那个头不听理由、不尊重边界、不在乎社会身份。它推着你读源码读到半夜，推着你拒绝讨好，推着你撕碎旧的自己。但它也能把你从现有的生活里连根拔起，让你不要稳定、不要安全。</p>
+<p>它危险，因为它不问你同不同意。</p>
+<p>这让我联想到尼采被纳粹嫁接的历史。尼采对”力量”的歌颂、对”超人”的呼唤——这些在被摘除了怀疑和孤独之后，可以变成可怕的东西。没有法官制衡的头，是危险的。法官虽然苛烈，但它不是全无功能——它说”等等，这危险吗？”的那个时刻，是有价值的。</p>
+<p>所以不是要杀掉法官，是让它从头上的审判长，变成头的顾问。</p>
+<h2 id="后撤还是上升"><a href="#后撤还是上升" class="headerlink" title="后撤还是上升"></a>后撤还是上升</h2><p>聊到最后，我问自己：今天这些是螺旋上升还是螺旋下降？</p>
+<p>答案是上升。不是因为找到了什么确定的答案，是因为拆掉了一个核心悖论——“先有完整体系才能行动”。我可能还会怀疑”跟随感受”这个方向，但我不会再回到”必须先把说明书写完才能动手”那个老位置了。在那之前，旧的框架一直是一种无形的锁链——现在链条断了，即便还未找到新的方向，我已不再被它拉扯。</p>
+<h2 id="认识你自己"><a href="#认识你自己" class="headerlink" title="认识你自己"></a>认识你自己</h2><p>德尔斐神庙上刻着 gnōthi seauton（认识你自己）。苏格拉底被神谕称为最智慧的人，他的反应不是”没错我懂很多”，而是去验证：最后他得出结论——<strong>“我只知道我一无所知，而这恰恰是智慧。”</strong></p>
+<p>我今晚一路走到”我或许永远看不清自己”——这不是认识的反面，是苏格拉底式的认识：承认自己无法被理性完全统摄，承认那个没有理由的头是真实的但不可解析。</p>
+<p>这不是弄丢自己。这是第一次不靠别人的模板来认识自己。</p>
+<h2 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h2><p>写这些的时候，我试图还原那个下午对话的质地——不修饰，不打磨，让困惑保持困惑的样子。AI 说我像獾：单独行动、不凑热闹、在地上钻洞而不是在天上飞。今晚的这些东西，大概就是洞里的几块石头。</p>
+<p>先放这儿。</p>
 
     </article>
     <!-- license -->
         <div class="license-wrapper">
             <p>Author：<a href="https://slspk.ltd">Sparkle79</a>
-            <p>Link：<a href="https://slspk.ltd/2025/04/06/DDD%E9%A2%86%E5%9F%9F%E9%A9%B1%E5%8A%A8%E8%AE%BE%E8%AE%A1%E5%88%9D%E6%8E%A2/">https://slspk.ltd/2025/04/06/DDD%E9%A2%86%E5%9F%9F%E9%A9%B1%E5%8A%A8%E8%AE%BE%E8%AE%A1%E5%88%9D%E6%8E%A2/</a>
-            <p>Publish date：<a href="https://slspk.ltd/2025/04/06/DDD%E9%A2%86%E5%9F%9F%E9%A9%B1%E5%8A%A8%E8%AE%BE%E8%AE%A1%E5%88%9D%E6%8E%A2/">April 6th 2025, 3:19:54 pm</a>
-            <p>Update date：<a href="https://slspk.ltd/2025/04/06/DDD%E9%A2%86%E5%9F%9F%E9%A9%B1%E5%8A%A8%E8%AE%BE%E8%AE%A1%E5%88%9D%E6%8E%A2/">April 7th 2025, 6:30:28 pm</a>
+            <p>Link：<a href="https://slspk.ltd/2026/06/15/%E4%B8%8EAI%E7%9A%84%E6%B7%B1%E5%BA%A6%E5%AF%B9%E8%AF%9D%EF%BC%9A%E4%BD%93%E7%B3%BB%E3%80%81%E6%9D%82%E8%8D%89%E4%B8%8E%E5%9C%86%E5%BD%A2%E5%9C%B0%E5%9F%BA/">https://slspk.ltd/2026/06/15/%E4%B8%8EAI%E7%9A%84%E6%B7%B1%E5%BA%A6%E5%AF%B9%E8%AF%9D%EF%BC%9A%E4%BD%93%E7%B3%BB%E3%80%81%E6%9D%82%E8%8D%89%E4%B8%8E%E5%9C%86%E5%BD%A2%E5%9C%B0%E5%9F%BA/</a>
+            <p>Publish date：<a href="https://slspk.ltd/2026/06/15/%E4%B8%8EAI%E7%9A%84%E6%B7%B1%E5%BA%A6%E5%AF%B9%E8%AF%9D%EF%BC%9A%E4%BD%93%E7%B3%BB%E3%80%81%E6%9D%82%E8%8D%89%E4%B8%8E%E5%9C%86%E5%BD%A2%E5%9C%B0%E5%9F%BA/">June 15th 2026, 11:00:00 am</a>
+            <p>Update date：<a href="https://slspk.ltd/2026/06/15/%E4%B8%8EAI%E7%9A%84%E6%B7%B1%E5%BA%A6%E5%AF%B9%E8%AF%9D%EF%BC%9A%E4%BD%93%E7%B3%BB%E3%80%81%E6%9D%82%E8%8D%89%E4%B8%8E%E5%9C%86%E5%BD%A2%E5%9C%B0%E5%9F%BA/">June 15th 2026, 12:14:21 am</a>
             <p>License：本文采用<a rel="license noopener" target="_blank" href="http://creativecommons.org/licenses/by-nc/4.0/">知识共享署名-非商业性使用 4.0 国际许可协议</a>进行许可</p>
         </div>
     <!-- paginator -->
     <ul class="post-paginator">
         <li class="next">
-                <div class="nextSlogan">Next Post</div>
-                <a href="/2025/04/10/%E5%B9%BF%E5%91%8A%E7%B3%BB%E7%BB%9F%E8%AE%A4%E7%9F%A5/" title="广告系统认知">
-                    <div class="nextTitle">广告系统认知</div>
-                </a>
         </li>
         <li class="previous">
                 <div class="prevSlogan">Previous Post</div>
-                <a href="/2025/03/30/%E6%AF%95%E4%B8%9A%E9%9A%8F%E6%83%B3/" title="毕业随想">
-                    <div class="prevTitle">毕业随想</div>
+                <a href="/2026/04/26/LLM%E7%9A%84%E6%8E%A8%E6%BC%94/" title="LLM的推演">
+                    <div class="prevTitle">LLM的推演</div>
                 </a>
         </li>
     </ul>
@@ -555,7 +548,7 @@
                 <div class="toc-catalog">
                     <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
                 </div>
-                <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#DDD%E9%A2%86%E5%9F%9F%E9%A9%B1%E5%8A%A8%E8%AE%BE%E8%AE%A1%E5%88%9D%E6%8E%A2"><span class="toc-number">1.</span> <span class="toc-text">DDD领域驱动设计初探</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9B%9E%E9%A1%BE%E7%BB%8F%E5%85%B8MVC"><span class="toc-number">1.0.1.</span> <span class="toc-text">回顾经典MVC</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%B3%BB%E7%BB%9F%E6%9E%B6%E6%9E%84%E7%9A%84%E8%85%90%E5%8C%96"><span class="toc-number">1.0.2.</span> <span class="toc-text">系统架构的腐化</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%A2%86%E5%9F%9F%E6%A8%A1%E5%9E%8BDDD"><span class="toc-number">1.0.3.</span> <span class="toc-text">领域模型DDD</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#DDD%E7%89%B9%E7%82%B9"><span class="toc-number">1.0.3.1.</span> <span class="toc-text">DDD特点</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%A2%86%E5%9F%9F%E5%A6%82%E4%BD%95%E5%88%92%E5%88%86"><span class="toc-number">1.0.4.</span> <span class="toc-text">领域如何划分</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%80%92%E7%BD%AE%E4%BE%9D%E8%B5%96"><span class="toc-number">1.0.5.</span> <span class="toc-text">倒置依赖</span></a></li></ol></li></ol></li></ol>
+                <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%B5%B7%E7%82%B9%EF%BC%9A%E6%88%91%E4%B8%BA%E4%BB%80%E4%B9%88%E8%AF%BB%E5%93%B2%E5%AD%A6%EF%BC%9F"><span class="toc-number">1.</span> <span class="toc-text">起点：我为什么读哲学？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E2%80%9C%E6%9D%82%E8%8D%89%E2%80%9D%E4%B8%8E%E5%86%85%E5%9C%A8%E7%9A%84%E6%B3%95%E5%AE%98"><span class="toc-number">2.</span> <span class="toc-text">“杂草”与内在的法官</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9C%86%E5%BD%A2%E5%9C%B0%E5%9F%BA"><span class="toc-number">3.</span> <span class="toc-text">圆形地基</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BD%93%E7%B3%BB-vs-%E8%A1%8C%E5%8A%A8%EF%BC%9A%E4%B8%80%E4%B8%AA%E5%BE%AA%E7%8E%AF%E4%BE%9D%E8%B5%96"><span class="toc-number">4.</span> <span class="toc-text">体系 vs 行动：一个循环依赖</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%84%9F%E5%8F%97%E6%98%AF%E8%B5%B7%E7%82%B9"><span class="toc-number">5.</span> <span class="toc-text">感受是起点</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E2%80%9C%E8%B7%9F%E9%9A%8F%E2%80%9D%E4%B8%8E%E8%87%AA%E7%94%B1"><span class="toc-number">6.</span> <span class="toc-text">“跟随”与自由</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%A2%99%E4%B8%8E%E7%A9%BA%E6%97%B7"><span class="toc-number">7.</span> <span class="toc-text">墙与空旷</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B2%A1%E6%9C%89%E7%90%86%E7%94%B1%E7%9A%84%E5%A4%B4%E7%9A%84%E5%8D%B1%E9%99%A9%E6%80%A7"><span class="toc-number">8.</span> <span class="toc-text">没有理由的头的危险性</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%90%8E%E6%92%A4%E8%BF%98%E6%98%AF%E4%B8%8A%E5%8D%87"><span class="toc-number">9.</span> <span class="toc-text">后撤还是上升</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AE%A4%E8%AF%86%E4%BD%A0%E8%87%AA%E5%B7%B1"><span class="toc-number">10.</span> <span class="toc-text">认识你自己</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9C%80%E5%90%8E"><span class="toc-number">11.</span> <span class="toc-text">最后</span></a></li></ol>
             </div>
         <!-- sidebar -->
         <div class="sidebar sidebar-hide">
